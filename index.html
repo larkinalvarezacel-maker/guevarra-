@@ -1,16 +1,1089 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#050505"><title>GUEVARRA — Community</title>
-<style>
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800&family=Manrope:wght@300;400;500;700&display=swap');
-:root{--bg:#050505;--fg:#f4f4f4;--muted:#aaa;--line:#303030;--serif:Cinzel,Georgia,serif;--sans:Manrope,Arial,sans-serif}*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:80px}body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--sans);overflow-x:hidden}a{color:inherit;text-decoration:none}
-header{height:74px;position:fixed;z-index:10;inset:0 0 auto;display:flex;align-items:center;justify-content:space-between;padding:0 4.5vw;background:#050505c9;backdrop-filter:blur(16px);border-bottom:1px solid #ffffff30}.brand{display:flex;align-items:center;gap:13px;letter-spacing:.34em;font-size:12px;font-weight:700}.sigil{width:34px;height:34px;border:1px solid #eee;border-radius:50%;display:grid;place-items:center;font-size:20px}nav{display:flex;gap:clamp(16px,3vw,44px)}nav a,.socials a{font-size:10px;letter-spacing:.2em;color:#ccc;transition:color .25s}nav a:hover,.socials a:hover{color:#fff}.socials{display:flex;gap:15px}.tagline{border-left:1px solid #777;padding-left:15px;font-size:9px;letter-spacing:.15em;line-height:1.8;color:#bbb}.menu{display:none;background:none;border:1px solid #555;color:white;padding:9px}
-.hero{height:100svh;min-height:690px;max-height:1050px;position:relative;display:grid;place-items:center;overflow:hidden;background:#030303}.hero-bg{position:absolute;inset:0;background:linear-gradient(180deg,#0003 0%,#0000 40%,#050505 99%),url('guevarra-background.jpg') center 48%/cover no-repeat;animation:zoom 24s ease-in-out infinite alternate}.hero:after{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at center,transparent 15%,#0008 100%);pointer-events:none}.hero-content{z-index:1;text-align:center;width:92%;padding-top:60px;animation:rise 1s both}.eyebrow,.kicker{font-size:10px;letter-spacing:.38em;color:#ccc}.hero h1{font-family:var(--serif);font-size:clamp(48px,10.4vw,145px);line-height:.95;letter-spacing:-.065em;margin:22px 0 0;text-shadow:0 5px 35px #000;white-space:nowrap}.hero h1 span{display:block;font-family:var(--sans);font-size:clamp(10px,1.4vw,18px);letter-spacing:.75em;padding-left:.75em;margin-top:22px;font-weight:400}.rule{height:1px;width:165px;margin:31px auto 24px;background:linear-gradient(90deg,transparent,#eee,transparent)}.sub{font-size:clamp(10px,1.2vw,14px);letter-spacing:.25em;color:#ddd;margin:0 0 38px}.cta{display:inline-flex;gap:20px;align-items:center;padding:17px 34px;border:1px solid #ddd;clip-path:polygon(9% 0,91% 0,100% 50%,91% 100%,9% 100%,0 50%);font-size:10px;letter-spacing:.3em;background:#0008;transition:.3s}.cta:hover{background:#fff;color:#050505;transform:translateY(-3px);box-shadow:0 0 30px #fff2}.side{position:absolute;z-index:2;top:42%;font-size:9px;letter-spacing:.27em;line-height:2.2;color:#ccc}.left{left:5.8vw}.right{right:5.8vw;text-align:right}.scroll{position:absolute;z-index:2;bottom:28px;left:4.5vw;display:flex;gap:12px;align-items:center;font-size:9px;letter-spacing:.25em;color:#bbb}.mouse{width:18px;height:32px;border:1px solid #aaa;border-radius:12px}.count{position:absolute;z-index:2;right:4.5vw;bottom:28px;font-size:10px;line-height:1.8;color:#bbb;text-align:center}
-section.content{padding:100px 6vw;border-top:1px solid #292929;background:linear-gradient(#080808,#030303)}.about-grid{display:grid;grid-template-columns:.8fr 1.5fr;gap:7vw}.about h2,.title{font-family:var(--serif);font-size:clamp(30px,4vw,54px);line-height:1.15;font-weight:600;margin:20px 0}.about p,.gallery p,.contact p{font-size:13px;line-height:2;color:#aaa;max-width:440px}.link{display:inline-flex;gap:18px;border-bottom:1px solid #777;padding:10px 0;font-size:10px;letter-spacing:.22em;margin-top:10px;transition:gap .3s}.link:hover{gap:28px}.features{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.feature{min-height:220px;border:1px solid #333;padding:28px 20px;background:linear-gradient(145deg,#151515,#050505);clip-path:polygon(9% 0,100% 0,100% 88%,89% 100%,0 100%,0 12%);transition:transform .35s,border-color .35s}.feature:hover{transform:translateY(-8px);border-color:#bbb}.icon{font-size:28px;margin-bottom:28px}.feature h3{font-size:11px;letter-spacing:.22em;margin:0 0 12px}.feature p{font-size:9px;line-height:1.9;letter-spacing:.08em;color:#aaa}.feature b{display:block;margin-top:20px;font-size:17px;font-weight:400}.gallery{display:grid;grid-template-columns:1.2fr .8fr;gap:20px}.visual{position:relative;min-height:360px;border:1px solid #333;overflow:hidden;background:linear-gradient(0deg,#000d,transparent 70%),url('guevarra-background.jpg') center/cover}.visual-caption{position:absolute;bottom:25px;left:28px}.visual-caption small{font-size:9px;letter-spacing:.25em;color:#ccc}.visual-caption h3{font-family:var(--serif);font-size:38px;margin:10px 0}.panel{padding:32px;border:1px solid #333;background:radial-gradient(circle at 80% 10%,#5553,transparent 45%),linear-gradient(145deg,#151515,#040404)}.contact{display:flex;align-items:center;justify-content:space-between;gap:35px}footer{padding:26px 4.5vw;display:flex;justify-content:space-between;align-items:center;gap:15px;border-top:1px solid #292929;color:#888;font-size:9px;letter-spacing:.22em}.footer-mark{font-family:var(--serif);font-size:23px;color:#ddd}.reveal{opacity:0;transform:translateY(24px);transition:opacity .8s,transform .8s cubic-bezier(.2,.7,.2,1)}.reveal.visible{opacity:1;transform:none}
-@keyframes rise{from{opacity:0;transform:translateY(25px)}to{opacity:1;transform:none}}@keyframes zoom{from{transform:scale(1.02)}to{transform:scale(1.12)}}@media(max-width:1000px){.socials,.tagline{display:none}.about-grid{grid-template-columns:1fr;gap:35px}.features{grid-template-columns:repeat(2,1fr)}.side{display:none}.hero h1{white-space:normal}}@media(max-width:680px){header{height:65px}nav{display:none;position:absolute;top:64px;left:0;right:0;padding:18px 24px;background:#080808;flex-direction:column;border-bottom:1px solid #333}nav.open{display:flex}nav a{padding:10px 0}.menu{display:block}.hero{min-height:660px;height:92svh}.hero-bg{background-size:auto 100%;background-position:center}.hero h1{font-size:clamp(45px,13.5vw,80px)}.hero h1 span{letter-spacing:.5em;padding-left:.5em}.sub{line-height:2;letter-spacing:.13em}.scroll{bottom:18px}.count{bottom:18px}section.content{padding:72px 22px}.features{gap:9px}.feature{padding:22px 15px;min-height:205px}.gallery{grid-template-columns:1fr}.visual{min-height:290px}.contact{align-items:flex-start;flex-direction:column}footer{flex-wrap:wrap}.footer-mark{order:3;width:100%}}@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}.reveal{opacity:1;transform:none}}
-</style></head><body>
-<header><a class="brand" href="#home"><span class="sigil">✦</span><span>GUEVARRA</span></a><nav id="nav"><a href="#home">HOME</a><a href="#about">ABOUT</a><a href="#features">FEATURES</a><a href="#gallery">GALLERY</a><a href="#contact">CONTACT</a></nav><div class="socials"><a href="#" aria-label="Instagram">◎</a><a href="#" aria-label="TikTok">♪</a><a href="#" aria-label="YouTube">▶</a><a href="#" aria-label="X">𝕏</a></div><div class="tagline">MORE THAN A GAME.<br>IT'S A LIFESTYLE.</div><button class="menu" id="menu">MENU ☰</button></header>
-<main><section class="hero" id="home"><div class="hero-bg"></div><div class="side left">GAMERS<br>FRIENDS<br>BROTHERS<br>GUEVARRA</div><div class="side right">PLAY<br>CONNECT<br>IMPROVE<br>TOGETHER</div><div class="hero-content"><div class="eyebrow">EST. 2025 · BUILT BY THE COMMUNITY</div><h1>GUEVARRA<span> C O M M U N I T Y </span></h1><div class="rule"></div><p class="sub">REAL PEOPLE. &nbsp; REAL BONDS. &nbsp; GUEVARRA.</p><a class="cta" href="#about">EXPLORE <span>↗</span></a></div><div class="scroll"><span class="mouse"></span><span>SCROLL TO DISCOVER</span></div><div class="count">01<br>—<br>04</div></section>
-<section class="content about" id="about"><div class="about-grid"><div class="reveal"><div class="kicker">ABOUT GUEVARRA</div><h2>BUILDING A<br>STRONGER COMMUNITY</h2><p>Guevarra is more than just a group — it's a home for like-minded people who share the same passion, grind, and vision. We support, we improve, and we grow together.</p><a class="link" href="#features">LEARN MORE <span>→</span></a></div><div class="features" id="features"><a class="feature reveal" href="#gallery"><div class="icon">⌖</div><h3>GAMEPLAY</h3><p>SHARE TIPS, LOADOUTS<br>AND STRATEGIES.</p><b>→</b></a><a class="feature reveal" href="#contact"><div class="icon">♧</div><h3>COMMUNITY</h3><p>MEET, CHAT AND<br>MAKE NEW FRIENDS.</p><b>→</b></a><a class="feature reveal" href="#gallery"><div class="icon">▤</div><h3>GUIDES</h3><p>STEP-BY-STEP GUIDES<br>FOR EVERY PLAYER.</p><b>→</b></a><a class="feature reveal" href="#contact"><div class="icon">♛</div><h3>GROWTH</h3><p>IMPROVE YOUR SKILLS<br>AND REACH NEW HEIGHTS.</p><b>→</b></a></div></div></section>
-<section class="content" id="gallery"><div class="kicker reveal">THE GUEVARRA STANDARD</div><h2 class="title reveal">ONE NAME. ONE COMMUNITY.</h2><div class="gallery"><div class="visual reveal"><div class="visual-caption"><small>OUR IDENTITY · OUR LEGACY</small><h3>BUILT DIFFERENT.</h3></div></div><div class="panel reveal"><div class="kicker">MORE THAN A GAME</div><h2 class="title">A PLACE TO<br>BELONG.</h2><p>From the first match to the next big milestone, Guevarra is about the people beside you. Bring your energy. Respect the grind. Leave your mark.</p><a class="link" href="#contact">CONNECT WITH US <span>↗</span></a></div></div></section>
-<section class="content" id="contact"><div class="contact reveal"><div><div class="kicker">YOUR NEXT CHAPTER STARTS HERE</div><h2 class="title">STAND WITH<br>GUEVARRA.</h2><p>Follow the journey, share the moments, and keep building something unforgettable with the community.</p></div><a class="cta" href="#home">BACK TO TOP <span>↑</span></a></div></section></main>
-<footer><span>© <span id="year"></span> GUEVARRA COMMUNITY</span><span class="footer-mark">✦</span><span>REAL PEOPLE · REAL BONDS</span></footer>
-<script>const nav=document.getElementById('nav');document.getElementById('menu').addEventListener('click',()=>nav.classList.toggle('open'));nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}}),{threshold:.12});document.querySelectorAll('.reveal').forEach((e,i)=>{e.style.transitionDelay=(i%4)*80+'ms';io.observe(e)});document.getElementById('year').textContent=new Date().getFullYear();</script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080808">
+
+  <title>Guevarra — Official Community</title>
+  <meta name="description" content="Welcome to Guevarra Community. One community, one identity, one standard.">
+
+  <!-- Premium fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Social icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #080808;
+      --surface: #101010;
+      --surface-hover: #171717;
+      --border: rgba(255,255,255,.09);
+      --muted: #888888;
+      --white: #ffffff;
+      --radius: 28px;
+      --max-width: 1180px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 100px;
+    }
+
+    body {
+      min-height: 100vh;
+      overflow-x: hidden;
+      background: var(--bg);
+      color: var(--white);
+      font-family: "DM Sans", sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      pointer-events: none;
+      background:
+        radial-gradient(ellipse at 50% -15%, rgba(255,255,255,.075), transparent 55%),
+        radial-gradient(ellipse at 100% 65%, rgba(255,255,255,.025), transparent 38%);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font: inherit;
+    }
+
+    .container {
+      width: min(var(--max-width), calc(100% - 40px));
+      margin-inline: auto;
+    }
+
+    /* NAVIGATION */
+
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      padding: 15px 0;
+      border-bottom: 1px solid rgba(255,255,255,.06);
+      background: rgba(8,8,8,.76);
+      backdrop-filter: blur(22px);
+      -webkit-backdrop-filter: blur(22px);
+    }
+
+    .nav-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+    }
+
+    .brand-mark {
+      display: grid;
+      width: 43px;
+      height: 43px;
+      flex-shrink: 0;
+      place-items: center;
+      border: 1px solid rgba(255,255,255,.24);
+      border-radius: 15px;
+      background: linear-gradient(145deg, #292929, #0b0b0b);
+      font-family: "Manrope", sans-serif;
+      font-size: 17px;
+      font-weight: 800;
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.08);
+    }
+
+    .brand-name {
+      font-family: "Manrope", sans-serif;
+      font-size: 16px;
+      font-weight: 800;
+      letter-spacing: .14em;
+    }
+
+    .brand-caption {
+      display: block;
+      margin-top: 2px;
+      color: var(--muted);
+      font-size: 10px;
+      letter-spacing: .17em;
+      text-transform: uppercase;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 27px;
+    }
+
+    .nav-links a {
+      color: #a5a5a5;
+      font-size: 13px;
+      transition: color .25s ease;
+    }
+
+    .nav-links a:hover {
+      color: white;
+    }
+
+    .nav-social {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+    }
+
+    .icon-button {
+      display: grid;
+      width: 39px;
+      height: 39px;
+      place-items: center;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      background: rgba(255,255,255,.035);
+      color: #dedede;
+      transition: transform .25s ease, background .25s ease, border-color .25s ease;
+    }
+
+    .icon-button:hover {
+      transform: translateY(-3px);
+      background: #202020;
+      border-color: rgba(255,255,255,.24);
+    }
+
+    /* HERO */
+
+    .hero {
+      position: relative;
+      padding: 105px 0 82px;
+      text-align: center;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: 50px;
+      left: 50%;
+      width: min(600px, 90vw);
+      height: 350px;
+      transform: translateX(-50%);
+      border-radius: 50%;
+      background: rgba(255,255,255,.045);
+      filter: blur(100px);
+      pointer-events: none;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      padding: 9px 14px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: rgba(255,255,255,.035);
+      color: #c5c5c5;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: white;
+      box-shadow: 0 0 12px rgba(255,255,255,.6);
+    }
+
+    .hero h1 {
+      margin: 29px auto 0;
+      font-family: "Manrope", sans-serif;
+      font-size: clamp(48px, 9vw, 104px);
+      line-height: .99;
+      font-weight: 800;
+      letter-spacing: -.075em;
+    }
+
+    .hero h1 span {
+      display: block;
+      color: #777;
+    }
+
+    .hero-description {
+      max-width: 510px;
+      margin: 25px auto 0;
+      color: #999;
+      font-size: 15px;
+      line-height: 1.9;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 31px;
+    }
+
+    .button {
+      display: inline-flex;
+      min-height: 49px;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 0 21px;
+      border: 1px solid transparent;
+      border-radius: 16px;
+      font-size: 13px;
+      font-weight: 700;
+      transition: transform .25s ease, background .25s ease, border-color .25s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-3px);
+    }
+
+    .button-primary {
+      background: white;
+      color: #080808;
+    }
+
+    .button-primary:hover {
+      background: #dedede;
+    }
+
+    .button-secondary {
+      border-color: var(--border);
+      background: rgba(255,255,255,.035);
+      color: white;
+    }
+
+    .button-secondary:hover {
+      background: #1a1a1a;
+      border-color: rgba(255,255,255,.2);
+    }
+
+    /* EDITORIAL DIVIDER */
+
+    .divider {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      margin: 0 auto;
+      color: #626262;
+      font-size: 10px;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+    }
+
+    .divider::before,
+    .divider::after {
+      content: "";
+      height: 1px;
+      flex: 1;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,.15));
+    }
+
+    .divider::after {
+      transform: rotate(180deg);
+    }
+
+    /* BRAND STATEMENT */
+
+    .statement {
+      padding: 12px 0 78px;
+    }
+
+    .statement-card {
+      position: relative;
+      overflow: hidden;
+      padding: 43px;
+      border: 1px solid var(--border);
+      border-radius: 32px;
+      background:
+        linear-gradient(135deg, rgba(255,255,255,.055), transparent 58%),
+        #101010;
+    }
+
+    .statement-card::after {
+      content: "G";
+      position: absolute;
+      right: 24px;
+      bottom: -105px;
+      color: rgba(255,255,255,.025);
+      font-family: "Manrope", sans-serif;
+      font-size: 330px;
+      font-weight: 800;
+      line-height: 1;
+      pointer-events: none;
+    }
+
+    .section-label {
+      color: #8a8a8a;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+    }
+
+    .statement-card h2 {
+      position: relative;
+      z-index: 1;
+      max-width: 730px;
+      margin-top: 19px;
+      font-family: "Manrope", sans-serif;
+      font-size: clamp(29px, 5vw, 49px);
+      line-height: 1.2;
+      letter-spacing: -.055em;
+    }
+
+    .statement-card p {
+      position: relative;
+      z-index: 1;
+      max-width: 600px;
+      margin-top: 17px;
+      color: #969696;
+      font-size: 14px;
+      line-height: 1.9;
+    }
+
+    /* VALUES */
+
+    .values {
+      padding: 0 0 88px;
+    }
+
+    .section-heading {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 20px;
+      margin-bottom: 25px;
+    }
+
+    .section-heading h2 {
+      margin-top: 9px;
+      font-family: "Manrope", sans-serif;
+      font-size: clamp(28px, 4vw, 40px);
+      font-weight: 800;
+      letter-spacing: -.055em;
+    }
+
+    .section-heading > p {
+      max-width: 300px;
+      color: #888;
+      font-size: 12px;
+      line-height: 1.8;
+    }
+
+    .values-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 15px;
+    }
+
+    .value-card {
+      position: relative;
+      min-height: 215px;
+      overflow: hidden;
+      padding: 25px;
+      border: 1px solid var(--border);
+      border-radius: 25px;
+      background: linear-gradient(150deg, #151515, #0c0c0c);
+      transition: transform .35s cubic-bezier(.2,.8,.2,1), border-color .35s ease, background .35s ease;
+    }
+
+    .value-card:hover {
+      transform: translateY(-7px);
+      border-color: rgba(255,255,255,.24);
+      background: linear-gradient(150deg, #1b1b1b, #101010);
+    }
+
+    .value-icon {
+      display: grid;
+      width: 47px;
+      height: 47px;
+      place-items: center;
+      border: 1px solid rgba(255,255,255,.11);
+      border-radius: 16px;
+      background: rgba(255,255,255,.045);
+      color: #f1f1f1;
+      font-size: 17px;
+    }
+
+    .value-number {
+      position: absolute;
+      top: 27px;
+      right: 25px;
+      color: #555;
+      font-size: 11px;
+      letter-spacing: .12em;
+    }
+
+    .value-card h3 {
+      margin-top: 29px;
+      font-family: "Manrope", sans-serif;
+      font-size: 18px;
+      letter-spacing: -.035em;
+    }
+
+    .value-card p {
+      margin-top: 9px;
+      color: #898989;
+      font-size: 12px;
+      line-height: 1.8;
+    }
+
+    /* SOCIAL MEDIA */
+
+    .social-section {
+      padding: 0 0 95px;
+    }
+
+    .social-panel {
+      display: grid;
+      grid-template-columns: .85fr 1.15fr;
+      gap: 40px;
+      align-items: center;
+      padding: 39px;
+      border: 1px solid var(--border);
+      border-radius: 32px;
+      background:
+        radial-gradient(ellipse at 0% 100%, rgba(255,255,255,.055), transparent 60%),
+        #101010;
+    }
+
+    .social-intro h2 {
+      margin-top: 14px;
+      font-family: "Manrope", sans-serif;
+      font-size: clamp(28px, 4vw, 43px);
+      line-height: 1.14;
+      letter-spacing: -.06em;
+    }
+
+    .social-intro p {
+      max-width: 350px;
+      margin-top: 15px;
+      color: #929292;
+      font-size: 13px;
+      line-height: 1.9;
+    }
+
+    .social-list {
+      display: grid;
+      gap: 11px;
+    }
+
+    .social-link {
+      display: flex;
+      min-height: 76px;
+      align-items: center;
+      gap: 15px;
+      padding: 13px 16px;
+      border: 1px solid var(--border);
+      border-radius: 21px;
+      background: rgba(255,255,255,.025);
+      transition: transform .25s ease, background .25s ease, border-color .25s ease;
+    }
+
+    .social-link:hover {
+      transform: translateX(5px);
+      border-color: rgba(255,255,255,.22);
+      background: rgba(255,255,255,.065);
+    }
+
+    .social-icon {
+      display: grid;
+      width: 45px;
+      height: 45px;
+      flex-shrink: 0;
+      place-items: center;
+      border: 1px solid rgba(255,255,255,.1);
+      border-radius: 15px;
+      background: #1a1a1a;
+      font-size: 19px;
+    }
+
+    .social-copy {
+      min-width: 0;
+      flex: 1;
+    }
+
+    .social-copy strong {
+      display: block;
+      font-size: 13px;
+      font-weight: 700;
+    }
+
+    .social-copy span {
+      display: block;
+      overflow: hidden;
+      margin-top: 4px;
+      color: #858585;
+      font-size: 11px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    .social-arrow {
+      color: #777;
+      font-size: 13px;
+      transition: transform .25s ease, color .25s ease;
+    }
+
+    .social-link:hover .social-arrow {
+      transform: translate(3px, -3px);
+      color: white;
+    }
+
+    /* FOOTER */
+
+    .footer {
+      padding: 25px 0 30px;
+      border-top: 1px solid rgba(255,255,255,.07);
+    }
+
+    .footer-inner {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .footer-brand {
+      color: #d8d8d8;
+      font-family: "Manrope", sans-serif;
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: .13em;
+    }
+
+    .footer-note {
+      margin-top: 6px;
+      color: #666;
+      font-size: 11px;
+    }
+
+    .footer-right {
+      color: #777;
+      font-size: 11px;
+    }
+
+    .footer-right a {
+      color: #ddd;
+      transition: color .2s ease;
+    }
+
+    .footer-right a:hover {
+      color: white;
+    }
+
+    /* ANIMATIONS */
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity .75s ease, transform .75s cubic-bezier(.2,.8,.2,1);
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .delay-1 { transition-delay: .08s; }
+    .delay-2 { transition-delay: .16s; }
+    .delay-3 { transition-delay: .24s; }
+
+    @keyframes fadeDown {
+      from { opacity: 0; transform: translateY(-12px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .navbar {
+      animation: fadeDown .65s ease both;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+      }
+
+      .reveal {
+        opacity: 1;
+        transform: none;
+      }
+    }
+
+    /* RESPONSIVE */
+
+    @media (max-width: 850px) {
+      .nav-links {
+        gap: 16px;
+      }
+
+      .nav-social {
+        display: none;
+      }
+
+      .social-panel {
+        grid-template-columns: 1fr;
+        gap: 27px;
+      }
+
+      .social-intro p {
+        max-width: 500px;
+      }
+
+      .values-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    @media (max-width: 560px) {
+      .container {
+        width: calc(100% - 28px);
+      }
+
+      .navbar {
+        padding: 12px 0;
+      }
+
+      .brand-mark {
+        width: 39px;
+        height: 39px;
+        border-radius: 13px;
+      }
+
+      .brand-name {
+        font-size: 14px;
+      }
+
+      .brand-caption {
+        font-size: 9px;
+      }
+
+      .nav-links {
+        gap: 13px;
+      }
+
+      .nav-links a {
+        font-size: 11px;
+      }
+
+      .hero {
+        padding: 83px 0 65px;
+      }
+
+      .hero h1 {
+        font-size: clamp(46px, 14vw, 70px);
+      }
+
+      .hero-description {
+        max-width: 340px;
+        font-size: 13px;
+      }
+
+      .button {
+        min-height: 46px;
+        padding-inline: 16px;
+        border-radius: 14px;
+        font-size: 12px;
+      }
+
+      .statement {
+        padding-bottom: 65px;
+      }
+
+      .statement-card {
+        padding: 27px 23px;
+        border-radius: 25px;
+      }
+
+      .statement-card::after {
+        right: -10px;
+        bottom: -48px;
+        font-size: 230px;
+      }
+
+      .statement-card p {
+        font-size: 12px;
+      }
+
+      .values {
+        padding-bottom: 70px;
+      }
+
+      .section-heading {
+        align-items: start;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .section-heading > p {
+        max-width: 330px;
+      }
+
+      .values-grid {
+        grid-template-columns: 1fr;
+        gap: 11px;
+      }
+
+      .value-card {
+        min-height: auto;
+        padding: 22px;
+        border-radius: 22px;
+      }
+
+      .value-card h3 {
+        margin-top: 20px;
+      }
+
+      .social-section {
+        padding-bottom: 70px;
+      }
+
+      .social-panel {
+        gap: 24px;
+        padding: 24px 17px;
+        border-radius: 26px;
+      }
+
+      .social-link {
+        min-height: 69px;
+        gap: 12px;
+        padding: 11px;
+        border-radius: 18px;
+      }
+
+      .social-icon {
+        width: 41px;
+        height: 41px;
+        border-radius: 13px;
+      }
+
+      .footer-inner {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <header class="navbar">
+    <div class="container nav-inner">
+
+      <a class="brand" href="#home" aria-label="Guevarra home">
+        <span class="brand-mark">G.</span>
+        <span>
+          <span class="brand-name">GUEVARRA</span>
+          <span class="brand-caption">Official Community</span>
+        </span>
+      </a>
+
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#values">Values</a>
+        <a href="#socials">Socials</a>
+      </nav>
+
+      <div class="nav-social">
+        <a class="icon-button"
+           href="https://www.instagram.com/beltran.community?dlrf=dXcwMmV1dGRjcHZv"
+           target="_blank" rel="noopener noreferrer"
+           aria-label="Instagram">
+          <i class="fa-brands fa-instagram"></i>
+        </a>
+
+        <a class="icon-button"
+           href="https://www.facebook.com/share/1GQRKjvMzY/"
+           target="_blank" rel="noopener noreferrer"
+           aria-label="Facebook">
+          <i class="fa-brands fa-facebook-f"></i>
+        </a>
+
+        <a class="icon-button"
+           href="https://www.tiktok.com/@beltranofficial08?_r=1&_t=ZS-9AdIq7NKqYB"
+           target="_blank" rel="noopener noreferrer"
+           aria-label="TikTok">
+          <i class="fa-brands fa-tiktok"></i>
+        </a>
+      </div>
+
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO -->
+    <section class="hero container" id="home">
+
+      <div class="eyebrow reveal">
+        <span class="eyebrow-dot"></span>
+        THE GUEVARRA COMMUNITY
+      </div>
+
+      <h1 class="reveal delay-1">
+        𝖌𝖚𝖊𝖛𝖆𝖗𝖗𝖆
+        <span>official.</span>
+      </h1>
+
+      <p class="hero-description reveal delay-2">
+        More than a name. More than a community.
+        A shared identity built on connection, respect,
+        and the people who make it what it is.
+      </p>
+
+      <div class="hero-actions reveal delay-3">
+        <a class="button button-primary" href="#about">
+          Discover our community
+          <i class="fa-solid fa-arrow-down"></i>
+        </a>
+
+        <a class="button button-secondary" href="#socials">
+          <i class="fa-solid fa-link"></i>
+          Our social platforms
+        </a>
+      </div>
+
+    </section>
+
+    <div class="container">
+      <div class="divider">One name · One community</div>
+    </div>
+
+    <!-- ABOUT -->
+    <section class="statement container" id="about">
+      <div class="statement-card reveal">
+
+        <span class="section-label">01 / The identity</span>
+
+        <h2>
+          Built around people.
+          Defined by our identity.
+        </h2>
+
+        <p>
+          Guevarra is a community connected by a shared name
+          and a common sense of belonging. This space represents
+          our identity, our connections, and the memories we
+          create together. Different personalities, one community.
+        </p>
+
+      </div>
+    </section>
+
+    <!-- VALUES -->
+    <section class="values container" id="values">
+
+      <div class="section-heading reveal">
+        <div>
+          <span class="section-label">02 / What defines us</span>
+          <h2>The community standard.</h2>
+        </div>
+
+        <p>
+          The principles behind a stronger, more connected community.
+        </p>
+      </div>
+
+      <div class="values-grid">
+
+        <article class="value-card reveal">
+          <span class="value-number">01</span>
+          <div class="value-icon">
+            <i class="fa-solid fa-fingerprint"></i>
+          </div>
+          <h3>Identity</h3>
+          <p>
+            A name that brings people together and gives our community
+            a recognizable identity.
+          </p>
+        </article>
+
+        <article class="value-card reveal delay-1">
+          <span class="value-number">02</span>
+          <div class="value-icon">
+            <i class="fa-solid fa-link"></i>
+          </div>
+          <h3>Connection</h3>
+          <p>
+            Building friendships, sharing moments, and keeping
+            our community connected.
+          </p>
+        </article>
+
+        <article class="value-card reveal delay-2">
+          <span class="value-number">03</span>
+          <div class="value-icon">
+            <i class="fa-solid fa-gem"></i>
+          </div>
+          <h3>Respect</h3>
+          <p>
+            Valuing each person, respecting differences, and
+            representing our community with pride.
+          </p>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- SOCIAL MEDIA -->
+    <section class="social-section container" id="socials">
+
+      <div class="social-panel reveal">
+
+        <div class="social-intro">
+          <span class="section-label">03 / Stay connected</span>
+
+          <h2>
+            Find us<br>
+            beyond this page.
+          </h2>
+
+          <p>
+            Follow our official social platforms to stay connected
+            with the Guevarra community and find our latest content.
+          </p>
+        </div>
+
+        <div class="social-list">
+
+          <a class="social-link"
+             href="https://www.instagram.com/beltran.community?dlrf=dXcwMmV1dGRjcHZv"
+             target="_blank" rel="noopener noreferrer">
+
+            <span class="social-icon">
+              <i class="fa-brands fa-instagram"></i>
+            </span>
+
+            <span class="social-copy">
+              <strong>Instagram</strong>
+              <span>@beltran.community</span>
+            </span>
+
+            <i class="fa-solid fa-arrow-up-right-from-square social-arrow"></i>
+          </a>
+
+          <a class="social-link"
+             href="https://www.facebook.com/share/1GQRKjvMzY/"
+             target="_blank" rel="noopener noreferrer">
+
+            <span class="social-icon">
+              <i class="fa-brands fa-facebook-f"></i>
+            </span>
+
+            <span class="social-copy">
+              <strong>Facebook</strong>
+              <span>Guevarra community page</span>
+            </span>
+
+            <i class="fa-solid fa-arrow-up-right-from-square social-arrow"></i>
+          </a>
+
+          <a class="social-link"
+             href="https://www.tiktok.com/@beltranofficial08?_r=1&_t=ZS-9AdIq7NKqYB"
+             target="_blank" rel="noopener noreferrer">
+
+            <span class="social-icon">
+              <i class="fa-brands fa-tiktok"></i>
+            </span>
+
+            <span class="social-copy">
+              <strong>TikTok</strong>
+              <span>@beltranofficial08</span>
+            </span>
+
+            <i class="fa-solid fa-arrow-up-right-from-square social-arrow"></i>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+
+      <div>
+        <div class="footer-brand">𝖌𝖚𝖊𝖛𝖆𝖗𝖗𝖆</div>
+        <p class="footer-note">
+          One identity. Countless connections.
+        </p>
+      </div>
+
+      <div class="footer-right">
+        © <span id="year"></span> Guevarra Community.
+        Made with intention.
+      </div>
+
+    </div>
+  </footer>
+
+  <script>
+    // Reveal elements smoothly as they enter the viewport.
+    const revealElements = document.querySelectorAll(".reveal");
+
+    if ("IntersectionObserver" in window) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.12,
+        rootMargin: "0px 0px -25px 0px"
+      });
+
+      revealElements.forEach((element) => observer.observe(element));
+    } else {
+      revealElements.forEach((element) => {
+        element.classList.add("visible");
+      });
+    }
+
+    // Automatically update the footer year.
+    document.getElementById("year").textContent =
+      new Date().getFullYear();
+  </script>
+
+</body>
+</html>
