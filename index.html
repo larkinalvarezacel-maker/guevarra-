@@ -1111,6 +1111,60 @@
       .intro { display: none; }
       .cursor-follower { display: none; }
     }
+  
+
+    /* ───────── AUTO-FIT RESPONSIVE LAYOUT PATCH ───────── */
+    html { width: 100%; min-width: 0; overflow-x: clip; }
+    body { width: 100%; min-width: 0; overflow-x: clip; }
+    main, header, footer, section, nav, .container, .navbar-inner,
+    .hero, .statement, .values, .social-section, .footer-inner,
+    .social-panel, .section-heading, .values-grid { min-width: 0; }
+    .container { width: min(var(--max-width), calc(100% - clamp(28px, 6vw, 64px))); }
+    .hero h1 { font-size: clamp(2.9rem, 10.5vw, 8.75rem); overflow-wrap: anywhere; }
+    .hero h1 .word { max-width: 100%; }
+    .hero h1 span.sub { font-size: clamp(.72rem, 1.6vw, 1.25rem); letter-spacing: clamp(.18em, .55em, .6em); }
+    .hero-art { width: min(850px, 115vw); height: min(850px, 115vw); max-width: 100vw; }
+    .hero-description { width: min(100%, 560px); padding-inline: 8px; }
+    .hero-actions { width: 100%; align-items: center; }
+    .social-panel, .statement-card, .value-card, .social-link { min-width: 0; }
+    .social-link, .social-copy, .social-copy strong, .social-copy span { overflow-wrap: anywhere; }
+    img, video, canvas, svg { max-width: 100%; }
+
+    @media (min-width: 1200px) {
+      .container { width: min(var(--max-width), calc(100% - 80px)); }
+      .hero { padding-top: clamp(120px, 12vh, 160px); padding-bottom: clamp(90px, 10vh, 130px); }
+    }
+    @media (min-width: 601px) and (max-width: 900px) {
+      .container { width: calc(100% - 48px); }
+      .hero { padding: 112px 0 84px; }
+      .hero h1 { font-size: clamp(4rem, 11vw, 6.5rem); }
+      .hero-description { font-size: 15px; }
+      .social-panel { padding: 34px 26px; }
+    }
+    @media (max-width: 600px) {
+      .container { width: calc(100% - 32px); }
+      .hero { padding: clamp(82px, 13vh, 110px) 0 64px; }
+      .hero h1 { font-size: clamp(2.65rem, 13.5vw, 5rem); line-height: .98; letter-spacing: -.045em; }
+      .hero h1 span.sub { margin-top: 12px; font-size: clamp(.65rem, 2.8vw, .82rem); letter-spacing: .28em; padding-left: .28em; }
+      .eyebrow { max-width: 100%; font-size: 9px; letter-spacing: .12em; padding: 7px 11px; gap: 7px; }
+      .hero-description { font-size: 14px; line-height: 1.75; padding-inline: 0; }
+      .hero-actions { gap: 11px; margin-top: 28px; }
+      .hero-actions .button { width: 100%; max-width: 360px; }
+      .section-heading h2 { font-size: clamp(1.8rem, 8vw, 3rem); overflow-wrap: anywhere; }
+      .statement-card { padding: clamp(24px, 7vw, 34px) clamp(18px, 5vw, 26px); }
+      .social-panel { padding: 24px 16px; gap: 24px; }
+      .social-link { width: 100%; }
+      .mobile-nav { padding-left: 20px; padding-right: 20px; padding-bottom: max(24px, env(safe-area-inset-bottom)); }
+      .close-toggle { top: max(16px, env(safe-area-inset-top)); right: 16px; }
+    }
+    @media (max-width: 360px) {
+      .container { width: calc(100% - 24px); }
+      .brand-caption { display: none; }
+      .hero h1 { font-size: clamp(2.3rem, 12.5vw, 2.8rem); }
+      .hero h1 span.sub { letter-spacing: .18em; padding-left: .18em; }
+      .social-link { gap: 10px; padding-inline: 10px; }
+    }
+
   </style>
 </head>
 
